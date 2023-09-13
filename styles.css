@@ -1,0 +1,116 @@
+/* --text: #def4fc;
+--background: #000000;
+--primary: #51c3f0;
+--secondary: #063446;
+--accent: #2cb6ed; */
+body{
+    margin: 0;
+    background-color: #000000;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #51c3f0;
+    border-radius: 50%;
+    border:  10px solid #063446;
+    height: 850px;
+    width: 850px;
+}
+.clock-center{
+    background-color: #000000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+.digital-clock-text{
+    color: #def4fc;
+    font-size: 100px;
+}
+
+/* For 4k Display
+@media only screen and (max-width: 2560px) {
+    .clock{
+        width: 900px;
+        height: 900px;
+    }
+    .digital-clock-text{
+        font-size: 150px;
+    }
+} */
+
+/* For Large Laptop display */
+@media only screen and (max-width: 1980px) {
+    .clock{
+        width: 500px;
+        height: 500px;
+    }
+    .digital-clock-text{
+        font-size: 60px;
+    }
+}
+/* For Smaller Laptop display */
+@media only screen and (max-width: 1024px) {
+    .clock{
+        width: 500px;
+        height: 500px;
+    }
+    .digital-clock-text{
+        font-size: 50px;
+    }
+}
+/* For Tablet display */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .clock{
+        width: 500px;
+        height: 500px;
+    }
+    .digital-clock-text{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-height: 768px) and (orientation: landscape) {
+    .container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .clock{
+        width: 450px;
+        height: 450px;
+    }
+    .digital-clock-text{
+        font-size: 40px;
+    }
+}
+/* For Mobile display */
+@media only screen and (max-width: 425px) and (orientation: portrait) {
+    .clock{
+        width: 300px;
+        height: 300px;
+    }
+    .digital-clock-text{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-height: 425px) and (orientation: landscape) {
+    .container{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .clock{
+        width: 300px;
+        height: 300px;
+    }
+    .digital-clock-text{
+        font-size: 40px;
+    }
+}
