@@ -45,10 +45,10 @@ h1 {
 }
 .clock-center{
   position: absolute;
-  height: 20px;
-  width: 20px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #000000;
 } 
 .bline {
   position: absolute;
@@ -56,16 +56,53 @@ h1 {
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 690px, black 690px, black 700px);
   width: 10px;
   height: 700px;
-  
   font-size: 20px;
   text-align: center;
 }
+.aline{
+  position: absolute;
+  height: 700px;
+  width: 2px;
+  background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 690px, black 690px, black 700px);
+}
 .bline:nth-child(1) { transform: rotate(0deg);}
+.aline:nth-child(7) { transform: rotate(6deg);}
+.aline:nth-child(8) { transform: rotate(12deg);}
+.aline:nth-child(9) { transform: rotate(18deg);}
+.aline:nth-child(10) { transform: rotate(24deg);}
+
 .bline:nth-child(2) { transform: rotate(30deg);}
+.aline:nth-child(11) { transform: rotate(36deg);}
+.aline:nth-child(12) { transform: rotate(42deg);}
+.aline:nth-child(13) { transform: rotate(48deg);}
+.aline:nth-child(14) { transform: rotate(54deg);}
+
 .bline:nth-child(3) { transform: rotate(60deg);}
+.aline:nth-child(15) { transform: rotate(66deg);}
+.aline:nth-child(16) { transform: rotate(72deg);}
+.aline:nth-child(17) { transform: rotate(78deg);}
+.aline:nth-child(18) { transform: rotate(84deg);}
+
 .bline:nth-child(4) { transform: rotate(90deg);}
+.aline:nth-child(19) { transform: rotate(96deg);}
+.aline:nth-child(20) { transform: rotate(102deg);}
+.aline:nth-child(21) { transform: rotate(108deg);}
+.aline:nth-child(22) { transform: rotate(114deg);}
+
 .bline:nth-child(5) { transform: rotate(120deg);}
+.aline:nth-child(23) { transform: rotate(126deg);}
+.aline:nth-child(24) { transform: rotate(132deg);}
+.aline:nth-child(25) { transform: rotate(138deg);}
+.aline:nth-child(26) { transform: rotate(144deg);}
+
 .bline:nth-child(6) { transform: rotate(150deg);}
+.aline:nth-child(27) { transform: rotate(156deg);}
+.aline:nth-child(28) { transform: rotate(162deg);}
+.aline:nth-child(29) { transform: rotate(168deg);}
+.aline:nth-child(30) { transform: rotate(174deg);}
+
+
+
 
 .number {
   position: absolute;
@@ -128,6 +165,11 @@ h1 {
   height: 390px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 380px, black 380px, black 390px);
 }
+.aline{
+  height: 390px;
+  width: 2px;
+  background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 380px, black 380px, black 390px);
+}
 }
 /* For Smaller Laptop display */
 @media only screen and (max-width: 1024px) {
@@ -166,7 +208,11 @@ h1 {
     width: 5px;
     height: 350px;
     background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 340px, black 340px, black 350px);
-    
+  }
+  .aline{
+    height: 350px;
+    width: 2px;
+    background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 340px, black 340px, black 350px);
   }
   .digital-clock-text {
     font-size: 40px;
@@ -217,6 +263,11 @@ h1 {
   height: 230px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
+.aline{
+  height: 230px;
+  width: 2px;
+  background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
+}
 }
 
 @media only screen and (max-height: 425px) and (orientation: landscape) {
@@ -253,6 +304,11 @@ h1 {
 .bline{
   width: 5px;
   height: 230px;
+  background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
+}
+.aline{
+  height: 230px;
+  width: 2px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
 }
