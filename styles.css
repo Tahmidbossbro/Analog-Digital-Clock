@@ -3,114 +3,212 @@
 --primary: #51c3f0;
 --secondary: #063446;
 --accent: #2cb6ed; */
-body{
-    margin: 0;
-    background-color: #000000;
+body {
+  margin: 0;
+  background-color: #000000;
 }
-.container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+h1 {
+  font-size: 40px;
 }
 
-.clock{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #51c3f0;
-    border-radius: 50%;
-    border:  10px solid #063446;
-    height: 850px;
-    width: 850px;
-}
-.clock-center{
-    background-color: #000000;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-}
-.digital-clock-text{
-    color: #def4fc;
-    font-size: 100px;
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* For 4k Display
-@media only screen and (max-width: 2560px) {
-    .clock{
-        width: 900px;
-        height: 900px;
-    }
-    .digital-clock-text{
-        font-size: 150px;
-    }
-} */
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #51c3f0;
+  border-radius: 50%;
+  border: 10px solid #063446;
+  height: 850px;
+  width: 850px;
+  position: relative;
+  
+  
+}
+.clock-center {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2cb6ed;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  
+}
+.bline {
+  position: absolute;
+  background-color: #000000;
+  width: 10px;
+  height: 400px;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+}
+.bline:nth-child(1) { transform: rotate(0deg);}
+.bline:nth-child(2) { transform: rotate(30deg);}
+.bline:nth-child(3) { transform: rotate(60deg);}
+.bline:nth-child(4) { transform: rotate(90deg);}
+.bline:nth-child(5) { transform: rotate(120deg);}
+.bline:nth-child(6) { transform: rotate(150deg);}
+
+.number {
+  position: absolute;
+  font-size: 35px;
+  color: #def4fc;
+  transform-origin: 50% 50%;
+}
+
+.number:nth-child(1) { transform: rotate(30deg) translateY(-390px); }
+.number:nth-child(2) { transform: rotate(60deg) translateY(-390px); }
+.number:nth-child(3) { transform: rotate(90deg) translateY(-390px); }
+.number:nth-child(4) { transform: rotate(120deg) translateY(-390px); }
+.number:nth-child(5) { transform: rotate(150deg) translateY(-390px); }
+.number:nth-child(6) { transform: rotate(180deg) translateY(-390px); }
+.number:nth-child(7) { transform: rotate(210deg) translateY(-390px); }
+.number:nth-child(8) { transform: rotate(240deg) translateY(-390px); }
+.number:nth-child(9) { transform: rotate(270deg) translateY(-390px); }
+.number:nth-child(10) { transform: rotate(300deg) translateY(-390px); }
+.number:nth-child(11) { transform: rotate(330deg) translateY(-390px); }
+.number:nth-child(12) { transform: rotate(360deg) translateY(-390px); }
+
+
+
+.digital-clock-text {
+  color: #def4fc;
+  font-size: 100px;
+}
 
 /* For Large Laptop display */
 @media only screen and (max-width: 1980px) {
-    .clock{
-        width: 500px;
-        height: 500px;
-    }
-    .digital-clock-text{
-        font-size: 60px;
-    }
+  .clock {
+    width: 500px;
+    height: 500px;
+  }
+  .digital-clock-text {
+    font-size: 60px;
+  }
+.number{
+  font-size: 30px;
+}
+.number:nth-child(1) { transform: rotate(30deg) translateY(-220px); }
+.number:nth-child(2) { transform: rotate(60deg) translateY(-220px); }
+.number:nth-child(3) { transform: rotate(90deg) translateY(-220px); }
+.number:nth-child(4) { transform: rotate(120deg) translateY(-220px); }
+.number:nth-child(5) { transform: rotate(150deg) translateY(-220px); }
+.number:nth-child(6) { transform: rotate(180deg) translateY(-220px); }
+.number:nth-child(7) { transform: rotate(210deg) translateY(-220px); }
+.number:nth-child(8) { transform: rotate(240deg) translateY(-220px); }
+.number:nth-child(9) { transform: rotate(270deg) translateY(-220px); }
+.number:nth-child(10) { transform: rotate(300deg) translateY(-220px); }
+.number:nth-child(11) { transform: rotate(330deg) translateY(-220px); }
+.number:nth-child(12) { transform: rotate(360deg) translateY(-220px); }
+
 }
 /* For Smaller Laptop display */
 @media only screen and (max-width: 1024px) {
-    .clock{
-        width: 500px;
-        height: 500px;
-    }
-    .digital-clock-text{
-        font-size: 50px;
-    }
+  .clock {
+    width: 500px;
+    height: 500px;
+  }
+  .digital-clock-text {
+    font-size: 50px;
+  }
 }
 /* For Tablet display */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
-    .clock{
-        width: 500px;
-        height: 500px;
-    }
-    .digital-clock-text{
-        font-size: 50px;
-    }
+  .clock {
+    width: 500px;
+    height: 500px;
+  }
+  .digital-clock-text {
+    font-size: 50px;
+  }
 }
 @media only screen and (max-height: 768px) and (orientation: landscape) {
-    .container{
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .clock{
-        width: 450px;
-        height: 450px;
-    }
-    .digital-clock-text{
-        font-size: 40px;
-    }
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .clock {
+    width: 450px;
+    height: 450px;
+  }
+  .digital-clock-text {
+    font-size: 40px;
+  }
+.number:nth-child(1) { transform: rotate(30deg) translateY(-200px); }
+.number:nth-child(2) { transform: rotate(60deg) translateY(-200px); }
+.number:nth-child(3) { transform: rotate(90deg) translateY(-200px); }
+.number:nth-child(4) { transform: rotate(120deg) translateY(-200px); }
+.number:nth-child(5) { transform: rotate(150deg) translateY(-200px); }
+.number:nth-child(6) { transform: rotate(180deg) translateY(-200px); }
+.number:nth-child(7) { transform: rotate(210deg) translateY(-200px); }
+.number:nth-child(8) { transform: rotate(240deg) translateY(-200px); }
+.number:nth-child(9) { transform: rotate(270deg) translateY(-200px); }
+.number:nth-child(10) { transform: rotate(300deg) translateY(-200px); }
+.number:nth-child(11) { transform: rotate(330deg) translateY(-200px); }
+.number:nth-child(12) { transform: rotate(360deg) translateY(-200px); }
 }
 /* For Mobile display */
 @media only screen and (max-width: 425px) and (orientation: portrait) {
-    .clock{
-        width: 300px;
-        height: 300px;
-    }
-    .digital-clock-text{
-        font-size: 40px;
-    }
+  .clock {
+    width: 300px;
+    height: 300px;
+  }
+  .digital-clock-text {
+    font-size: 40px;
+  }
+  .number{
+    font-size: 15px;
+  }
+.number:nth-child(1) { transform: rotate(30deg) translateY(-135px); }
+.number:nth-child(2) { transform: rotate(60deg) translateY(-135px); }
+.number:nth-child(3) { transform: rotate(90deg) translateY(-135px); }
+.number:nth-child(4) { transform: rotate(120deg) translateY(-135px); }
+.number:nth-child(5) { transform: rotate(150deg) translateY(-135px); }
+.number:nth-child(6) { transform: rotate(180deg) translateY(-135px); }
+.number:nth-child(7) { transform: rotate(210deg) translateY(-135px); }
+.number:nth-child(8) { transform: rotate(240deg) translateY(-135px); }
+.number:nth-child(9) { transform: rotate(270deg) translateY(-135px); }
+.number:nth-child(10) { transform: rotate(300deg) translateY(-135px); }
+.number:nth-child(11) { transform: rotate(330deg) translateY(-135px); }
+.number:nth-child(12) { transform: rotate(360deg) translateY(-135px); }
 }
 
 @media only screen and (max-height: 425px) and (orientation: landscape) {
-    .container{
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-    .clock{
-        width: 300px;
-        height: 300px;
-    }
-    .digital-clock-text{
-        font-size: 40px;
-    }
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .clock {
+    width: 300px;
+    height: 300px;
+  }
+  .digital-clock-text {
+    font-size: 40px;
+  }
+  .number{
+    font-size: 15px;
+  }
+.number:nth-child(1) { transform: rotate(30deg) translateY(-135px); }
+.number:nth-child(2) { transform: rotate(60deg) translateY(-135px); }
+.number:nth-child(3) { transform: rotate(90deg) translateY(-135px); }
+.number:nth-child(4) { transform: rotate(120deg) translateY(-135px); }
+.number:nth-child(5) { transform: rotate(150deg) translateY(-135px); }
+.number:nth-child(6) { transform: rotate(180deg) translateY(-135px); }
+.number:nth-child(7) { transform: rotate(210deg) translateY(-135px); }
+.number:nth-child(8) { transform: rotate(240deg) translateY(-135px); }
+.number:nth-child(9) { transform: rotate(270deg) translateY(-135px); }
+.number:nth-child(10) { transform: rotate(300deg) translateY(-135px); }
+.number:nth-child(11) { transform: rotate(330deg) translateY(-135px); }
+.number:nth-child(12) { transform: rotate(360deg) translateY(-135px); }
 }
