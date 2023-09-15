@@ -4,8 +4,12 @@ var hourHand = document.querySelector('.hour-hand');
 var secondDigit = document.querySelector('.second-digit');
 var minuteDigit = document.querySelector('.minute-digit');
 var hourDigit = document.querySelector('.hour-digit');
+var container = document.querySelector('.container');
 secondHand.style.transform = 'rotate(60deg)';
 setInterval(myMethod, 500);
+setTimeout(function () {
+    container.style.visibility = 'visible';
+}, 1000);
 function myMethod() {
     var d = new Date();
     // console.log(d.getHours + " : " + d.getMinutes + " : " + d.getSeconds);
@@ -37,3 +41,4 @@ function myMethod() {
     minuteHand.style.transform = 'rotate(' + ((6 * minutes) + (seconds * 0.1)) + 'deg)';
     hourHand.style.transform = 'rotate(' + ((hours * 30) + (minutes * 0.5)) + 'deg)';
 }
+// container.style.visibility = 'visible';

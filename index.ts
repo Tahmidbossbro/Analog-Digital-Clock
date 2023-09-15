@@ -6,12 +6,17 @@ const secondDigit = document.querySelector('.second-digit') as HTMLInputElement;
 const minuteDigit = document.querySelector('.minute-digit') as HTMLInputElement;
 const hourDigit = document.querySelector('.hour-digit') as HTMLInputElement;
 
+const container = document.querySelector('.container') as HTMLInputElement;
+
 
 secondHand.style.transform = 'rotate(60deg)';
 
 
 setInterval(myMethod, 500);
 
+setTimeout(function () {
+    container.style.visibility = 'visible';
+  }, 500)
 function myMethod( )
 {
     
@@ -54,5 +59,8 @@ function myMethod( )
 
 
     
-    
 }
+
+
+
+// container.style.visibility = 'visible';
