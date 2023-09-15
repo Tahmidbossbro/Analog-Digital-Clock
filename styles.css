@@ -52,19 +52,54 @@ h1 {
 } 
 .bline {
   position: absolute;
-  /* background-color: #000000; */
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 690px, black 690px, black 700px);
-  width: 10px;
+  width: 8px;
   height: 700px;
-  font-size: 20px;
-  text-align: center;
 }
 .aline{
   position: absolute;
   height: 700px;
-  width: 2px;
+  width: 4px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 690px, black 690px, black 700px);
 }
+/* Second Hand */
+.second-hand {
+  position: absolute;
+  width: 4px;
+  height: 750px;
+  background-color: black;
+  text-align: center;
+  transform: rotate(240deg);
+  background: linear-gradient(to bottom, black 0px, black 475px, rgba(0, 0, 0, 0) 475px, rgba(0, 0, 0, 0) 750px);
+}
+
+
+/* Minute Hand */
+
+.minute-hand{
+  position: absolute;
+  width: 8px;
+  height: 700px;
+  background-color: black;
+  text-align: center;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, black 0px, black 420px, rgba(0, 0, 0, 0) 420px, rgba(0, 0, 0, 0) 700px);
+}
+
+
+/* Hour Hand */
+.hour-hand{
+  position: absolute;
+  width: 10px;
+  height: 550px;
+  background-color: black;
+  text-align: center;
+  transform: rotate(270deg);
+  background: linear-gradient(to bottom, black 0px, black 345px, rgba(0, 0, 0, 0) 345px, rgba(0, 0, 0, 0) 550px);
+}
+
+
+
 .bline:nth-child(1) { transform: rotate(0deg);}
 .aline:nth-child(7) { transform: rotate(6deg);}
 .aline:nth-child(8) { transform: rotate(12deg);}
@@ -167,9 +202,33 @@ h1 {
 }
 .aline{
   height: 390px;
-  width: 2px;
+  width: 2.5px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 380px, black 380px, black 390px);
 }
+/* Second Hand */
+.second-hand{
+  width: 2.5px;
+  height: 420px;
+  transform: rotate(270deg);
+  background: linear-gradient(to bottom, black 0px, black 240px, rgba(0, 0, 0, 0) 240px, rgba(0, 0, 0, 0) 420px);
+}
+
+/* Minute Hand */
+.minute-hand{
+  width: 5px;
+  height: 390px;
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, black 0px, black 240px, rgba(0, 0, 0, 0) 240px, rgba(0, 0, 0, 0) 420px);
+}
+
+/* Hour Hand */
+.hour-hand{
+  width: 7px;
+  height: 290px;
+  transform: rotate(210deg);
+  background: linear-gradient(to bottom, black 0px, black 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 290px);
+}
+
 }
 /* For Smaller Laptop display */
 @media only screen and (max-width: 1024px) {
@@ -190,6 +249,7 @@ h1 {
   .digital-clock-text {
     font-size: 50px;
   }
+
 }
 @media only screen and (max-height: 768px) and (orientation: landscape) {
   .container {
@@ -211,12 +271,31 @@ h1 {
   }
   .aline{
     height: 350px;
-    width: 2px;
+    width: 2.5px;
     background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 340px, black 340px, black 350px);
   }
   .digital-clock-text {
     font-size: 40px;
   }
+  .second-hand{
+    width: 3px;
+    height: 400px;
+    transform: rotate(0deg);
+    background: linear-gradient(to bottom, black 0px, black 240px, rgba(0, 0, 0, 0) 240px, rgba(0, 0, 0, 0) 400px);
+  }
+
+  /* Minute Hand */
+.minute-hand{
+  width: 6px;
+  height: 350px;
+  transform: rotate(270deg);
+  background: linear-gradient(to bottom, black 0px, black 240px, rgba(0, 0, 0, 0) 240px, rgba(0, 0, 0, 0) 350px);
+}
+.hour-hand{
+  width: 8px;
+  height: 250px;
+}
+ 
 .number:nth-child(1) { transform: rotate(30deg) translateY(-200px); }
 .number:nth-child(2) { transform: rotate(60deg) translateY(-200px); }
 .number:nth-child(3) { transform: rotate(90deg) translateY(-200px); }
@@ -259,7 +338,7 @@ h1 {
   height: 230px;
 }
 .bline{
-  width: 5px;
+  width: 4px;
   height: 230px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
@@ -268,6 +347,28 @@ h1 {
   width: 2px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
+.second-hand{
+  width: 2px;
+  height: 250px;
+  transform: rotate(90deg);
+  background: linear-gradient(to bottom, black 0px, black 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 250px);
+}
+
+  /* Minute Hand */
+  .minute-hand{
+    width: 4px;
+    height: 230px;
+    transform: rotate(180deg);
+    background: linear-gradient(to bottom, black 0px, black 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 230px);
+  }
+
+  /* Hour Hand */
+  .hour-hand{
+    height: 150px;
+    width: 4.5px;
+    background: linear-gradient(to bottom, black 0px, black 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 230px);
+  }
+
 }
 
 @media only screen and (max-height: 425px) and (orientation: landscape) {
@@ -302,7 +403,7 @@ h1 {
   height: 230px;
 }
 .bline{
-  width: 5px;
+  width: 4px;
   height: 230px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
@@ -311,4 +412,23 @@ h1 {
   width: 2px;
   background: linear-gradient(to bottom, black 0px, black 10px, #2cb6ed 10px, #2cb6ed 220px, black 220px, black 230px);
 }
+.second-hand{
+  width: 2px;
+  height: 250px;
+  transform: rotate(102deg);
+  background: linear-gradient(to bottom, black 0px, black 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 250px);
+}
+  /* Minute Hand */
+  .minute-hand{
+    width: 4px;
+    height: 230px;
+    transform: rotate(180deg);
+    background: linear-gradient(to bottom, black 0px, black 140px, rgba(0, 0, 0, 0) 140px, rgba(0, 0, 0, 0) 2230px);
+  }
+  /* Hour Hand */
+  .hour-hand{
+    height: 150px;
+    width: 4.5px;
+    background: linear-gradient(to bottom, black 0px, black 100px, rgba(0, 0, 0, 0) 100px, rgba(0, 0, 0, 0) 230px);
+  }
 }
